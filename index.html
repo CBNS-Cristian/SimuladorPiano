@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Piano</title>
+    <link rel="shortcut icon" href="./assets/imagens/piano.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>  
+    
+    <main>
+        <header>
+            <h2>Piano Virtual</h2>
+            <div class="colunas volume-input">
+                <label for="volume">Volume</label>
+                <input type="range" name="volume" id="volume" value="20">
+            </div>
+            <div class="colunas teclas-input">
+                <label for="teclas">Teclas:</label>
+                <input type="checkbox" name="teclas" id="teclas">
+            </div>
+        </header>
+        <section>
+            <ul class="total-teclas">
+                <li class="key branco" data-key="A"><span>A</span></li>
+                <li class="key preto" data-key="W"><span>W</span></li>
+                <li class="key branco" data-key="S"><span>S</span></li>
+                <li class="key preto" data-key="E"><span>E</span></li>
+                <li class="key branco" data-key="D"><span>D</span></li>
+                <li class="key preto" data-key="F"><span>F</span></li>
+                <li class="key branco" data-key="T"><span>T</span></li>
+                <li class="key preto" data-key="G"><span>G</span></li>
+                <li class="key branco" data-key="Y"><span>Y</span></li>
+                <li class="key preto" data-key="H"><span>H</span></li>
+                <li class="key branco" data-key="U"><span>U</span></li>
+                <li class="key preto" data-key="J"><span>J</span></li>
+                <li class="key branco" data-key="K"><span>K</span></li>
+                <li class="key preto" data-key="O"><span>O</span></li>
+                <li class="key branco" data-key="L"><span>L</span></li>
+                <li class="key preto" data-key="P"><span>P</span></li>
+                <li class="key branco" data-key=";"><span>;</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/assets/js/script.js" type="module" defer></script>
+</body>
+</html>

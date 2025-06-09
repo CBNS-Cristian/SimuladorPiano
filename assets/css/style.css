@@ -1,0 +1,118 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e3f2fd;
+    color: white;
+    user-select: none;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid black;
+    gap: 30px;
+    border-radius: 10px;
+    padding: 30px 40px;
+    width: 800px;
+    background-color: black;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+    color: #b2b2b2;
+}
+header h2{
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+header div{
+    font-size: 1.19rem;
+    font-weight: 500;
+}
+.volume-input input{
+    accent-color: #fff;
+}
+.teclas-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.teclas-input input{
+    border-radius: 10px;
+    width: 60px;
+    height: 30px;
+    appearance: none;
+    border-radius: 30px;
+    background: #4b4b4b;
+    cursor: pointer;
+    position: relative;
+}
+.teclas-input input::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: inherit;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+.teclas-input input:checked::before{
+    left: 2rem;
+    background-color: #acacac;
+}
+
+.total-teclas{
+    display: flex;
+}
+.total-teclas .key{
+    cursor: pointer;
+    color: #a2a2a2;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 20px;
+    font-size: 1.7rem;
+}
+.key.branco{
+    width: 70px;
+    height: 230px;
+    background: linear-gradient(#fff 96%, #eee 4%);
+    border-radius: 5px;
+    border: 1px solid #4b4b4b;
+}
+.key.preto{
+    width: 40px;
+    height: 140px;
+    background: linear-gradient(#333, #000);
+    border-radius: 0 0 5px 5px;
+    z-index: 2;
+    margin: 0 -22px 0 -22px;
+}
+.total-teclas .branco.ativo{
+    box-shadow: inset -5px 5px 10px rgba(0, 0, 0, 0.212);
+    background: linear-gradient(to bottom #fff 0%, #eee 100%);
+}
+.total-teclas .preto.ativo{
+    box-shadow: inset -5px 5px 20px rgba(255, 255, 255, 0.212);
+    background: linear-gradient(to bottom #eee, #434343);
+}
+
+@media( width < 700px){
+    main{
+        margin: 0 auto;
+        transform: rotate(270deg);
+    }
+}
