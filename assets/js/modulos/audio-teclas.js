@@ -3,9 +3,10 @@ export default function audioTeclas(){
     let audio = new Audio('./assets/audios/a.wav')
     const volumeTeclas = document.querySelector('#volume');
 
-    const tocarAudio = (item) => {
-        audio.src = `./assets/audios/${item}.wav`
-        audio.play()
+    const tocarAudio = async (item) => {
+        audio.src = `/assets/audios/${item}.wav`
+        audio.currentTime = 0
+        await audio.play()
         const pressionarKey = document.querySelector(`[data-key="${item}"]`)
         pressionarKey.classList.add('ativo')
         setTimeout(()=>{
