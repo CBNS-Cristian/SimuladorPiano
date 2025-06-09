@@ -1,6 +1,6 @@
 export default function audioTeclas(){
     const teclasPiano = document.querySelectorAll('.key');
-    let audio = new Audio('./assets/audios/a.wav')
+    let audio = new Audio('./assets/audios/a.mp3')
     const volumeTeclas = document.querySelector('#volume');
 
     const tocarAudio = async (item) => {
