@@ -4,7 +4,7 @@ export default function audioTeclas(){
     const volumeTeclas = document.querySelector('#volume');
 
     const tocarAudio = async (item) => {
-        audio.src = `/Simulador de Piano/assets/audios/${item}.wav`
+        audio.src = `./assets/audios/${item}.mp3`
         audio.currentTime = 0
         await audio.play()
         const pressionarKey = document.querySelector(`[data-key="${item}"]`)
